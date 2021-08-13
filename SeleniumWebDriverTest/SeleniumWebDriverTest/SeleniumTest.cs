@@ -55,7 +55,7 @@ namespace SeleniumWebDriverTest
         }
       
         [Test, Order(4)] //Task 4 
-        public void _ClickOnBestSellersTab()
+        public void ClickOnBestSellersTab()
         {
             element = _webDriver.FindElement(By.XPath("//ul[@id='home-page-tabs']/li[2]/a"));
             element.Click();
@@ -76,5 +76,6 @@ namespace SeleniumWebDriverTest
             if (_webDriver != null)
                 _webDriver.Quit();
         }
+        
     }
 }
