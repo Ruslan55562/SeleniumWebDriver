@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SeleniumWebDriverTest
 {
-
+    [TestFixture]
     public class Tests
     {
         protected IWebDriver _webDriver;
@@ -25,21 +25,21 @@ namespace SeleniumWebDriverTest
         {
             Assert.AreEqual("My Store", _webDriver.Title, "The titles are different");
         }
-        [Test,Order(2)] // Task 2
+        [Test,Order(2)] // Task 2 (WOMEN tab)
         public void FirstTabName()
         {
             element = _webDriver.FindElement(By.CssSelector("#block_top_menu > ul > li:nth-child(1) > a"));
             Assert.IsTrue("WOMEN" == element.Text, "The actual name of the tab isn't such as declared");
         }
         
-        [Test, Order(2)] // Task 2
+        [Test, Order(2)] // Task 2 (Dresses tab)
         public void SecondTabName()
         {
             element = _webDriver.FindElement(By.XPath("//*[@id='block_top_menu']/ul/li[2]/a"));
             Assert.IsTrue("DRESSES" == element.Text, "The actual name of the tab isn't such as declared");
         }
         
-        [Test, Order(2)] // Task 2
+        [Test, Order(2)] // Task 2 (T-SHIRTS tab)
          public void ThirdTabName()
         {
             element = _webDriver.FindElement(By.XPath("//div[@id='block_top_menu']/ul/li[3]/a"));
