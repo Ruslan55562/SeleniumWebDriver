@@ -21,7 +21,6 @@ namespace SeleniumWebDriverTest
         }
 
         [Test, Order(1)] // Task 1
-
         public void ViewPageTitle()
         {
             Assert.AreEqual("My Store", _webDriver.Title, "The titles are different");
@@ -32,8 +31,7 @@ namespace SeleniumWebDriverTest
             element = _webDriver.FindElement(By.CssSelector("#block_top_menu > ul > li:nth-child(1) > a"));
             Assert.IsTrue("WOMEN" == element.Text, "The actual name of the tab isn't such as declared");
         }
-
-    
+        
         [Test, Order(2)] // Task 2
         public void SecondTabName()
         {
@@ -42,20 +40,20 @@ namespace SeleniumWebDriverTest
         }
         
         [Test, Order(2)] // Task 2
-        public void ThirdTabName()
+         public void ThirdTabName()
         {
             element = _webDriver.FindElement(By.XPath("//div[@id='block_top_menu']/ul/li[3]/a"));
             Assert.IsTrue("T-SHIRTS" == element.Text, "The actual name of the tab isn't such as declared");
         }
 
-
         [Test, Order(3)] //Task 3
         public void SearchFieldName()
         {
             element = _webDriver.FindElement(By.XPath("//*[@id='search_query_top']"));
-            Assert.AreEqual("search_query", element.GetAttribute("name"), "Incorrect name of SearchField");
+            //Assert.AreEqual("search_query", element.GetAttribute("name"), "Incorrect name of SearchField");
+            Assert.That(element.GetAttribute("name") == "search_query", "Incorrect name of SearchField");
         }
-
+      
         [Test, Order(4)] //Task 4 
         public void _ClickOnBestSellersTab()
         {
@@ -64,7 +62,6 @@ namespace SeleniumWebDriverTest
         }
 
         [Test, Order(5)] //Task 5
-
         public void SearchSomething()
         {
             element = _webDriver.FindElement(By.XPath("//*[@id='search_query_top']"));
