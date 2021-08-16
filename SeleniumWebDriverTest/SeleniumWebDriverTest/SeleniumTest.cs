@@ -28,27 +28,7 @@ namespace SeleniumWebDriverTest
             Assert.AreEqual("My Store", _webDriver.Title, "The titles are different");
             TestContext.WriteLine(_webDriver.Title);
         }
-        //[Test,Order(2)] // Task 2
-        //public void FirstTabName()
-        //{
-        //    element = _webDriver.FindElement(By.XPath("//div[@id='block_top_menu']/ul/li[1]/a"));
-        //    TestContext.WriteLine(element.Text);
-        //}
-
-        //[Test, Order(2)] // Task 2
-        //public void SecondTabName()
-        //{
-        //    element = _webDriver.FindElement(By.XPath("//div[@id='block_top_menu']/ul/li[2]/a"));
-        //    TestContext.WriteLine(element.Text);
-
-        //}
-        //[Test, Order(2)] // Task 2
-        //public void ThirdTabName()
-        //{
-        //    element = _webDriver.FindElement(By.XPath("//div[@id='block_top_menu']/ul/li[3]/a"));
-        //    TestContext.WriteLine(element.Text);
-
-        //}
+        
 
         [Test, Order(2)]
         public void TabsName()
